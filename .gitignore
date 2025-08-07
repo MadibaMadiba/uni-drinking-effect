@@ -1,0 +1,7 @@
+.venv/
+# Files for testing or archive
+.hidden/
+# Python bs
+__pycache__/
+.ropeproject/
+# Project specific
