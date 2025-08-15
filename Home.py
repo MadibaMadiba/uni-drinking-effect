@@ -13,6 +13,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+st.title("GPA Prediction")
+
 sex0 = st.radio("Gender", ["Male", "Female"])
 sex = 0 if sex0 == "Male" else 1
 
@@ -92,6 +94,5 @@ input_data = pd.DataFrame({
 })
 
 if st.button("Run"):
-    # st.toast("running...", icon="🥀")
     gpa_prediction = gpa_pred.predict(input_data)[0]
     st.success(f"Based on the information provided your predicted GPA is {gpa_prediction}")
